@@ -30,8 +30,9 @@ Laptop **Advan WorkPlus** (and many other compact laptops) has no physical **Hom
 ### Step 2 — Make it auto-start on every boot (easiest way)
 
 1. Download **`install-autostart.bat`** from the Releases page too.
-2. Put **`install-autostart.bat`** and **`KeyRemap.exe`** in the **same folder**.
-3. **Double-click `install-autostart.bat`**.
+2. Rename **`KeyRemap v[version].exe`**. to **`KeyRemap.exe`**
+3. Put **`install-autostart.bat`** and **`KeyRemap.exe`** in the **same folder**.
+4. **Double-click `install-autostart.bat`**.
 
 That's it. The script copies `KeyRemap.exe` into your Windows Startup folder and launches it. From now on the remap runs automatically every time Windows starts.
 
@@ -82,8 +83,9 @@ If you'd rather see/edit the code instead of running an `.exe`:
 ### Langkah 2 — Buat otomatis jalan tiap boot (cara paling gampang)
 
 1. Download juga **`install-autostart.bat`** dari halaman Releases.
-2. Taruh **`install-autostart.bat`** dan **`KeyRemap.exe`** di **folder yang sama**.
-3. **Double-click `install-autostart.bat`**.
+2. Ganti nama **`KeyRemap v[version].exe`**. ke **`KeyRemap.exe`**
+3. Taruh **`install-autostart.bat`** dan **`KeyRemap.exe`** di **folder yang sama**.
+4. **Double-click `install-autostart.bat`**.
 
 Selesai. Script akan menyalin `KeyRemap.exe` ke folder Startup Windows dan langsung menjalankannya. Mulai sekarang remap otomatis aktif tiap Windows menyala.
 
