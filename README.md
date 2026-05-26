@@ -2,8 +2,6 @@
 
 Laptop **Advan WorkPlus** (and many other compact laptops) has no physical **Home**, **End**, **Page Up**, or **Page Down** keys. This repo provides a simple **AutoHotkey v2** remap that maps **Alt + Arrow** combinations to those functions.
 
-Two ways to use it: **download the ready-made `.exe`** (easiest) or **use the `.ahk` script** (transparent, editable).
-
 > 🇬🇧 English below · 🇮🇩 Bahasa Indonesia di bawah
 
 ---
@@ -21,7 +19,7 @@ Two ways to use it: **download the ready-made `.exe`** (easiest) or **use the `.
 
 ## 🇬🇧 English
 
-### Option 1 — Use the `.exe` (easiest, no install)
+### Step 1 — Run the remap
 
 1. Open the **[Releases](../../releases)** page.
 2. Download **`KeyRemap.exe`**.
@@ -29,59 +27,30 @@ Two ways to use it: **download the ready-made `.exe`** (easiest) or **use the `.
 
 > No need to install AutoHotkey — the `.exe` is self-contained.
 
-**Auto-start on every boot:**
+### Step 2 — Make it auto-start on every boot (easiest way)
 
-1. Press `Win + R`.
-2. Type **`shell:startup`** and hit Enter. The Startup folder opens.
-3. **Copy** `KeyRemap.exe` into that folder (or place a shortcut there).
+1. Download **`install-autostart.bat`** from the Releases page too.
+2. Put **`install-autostart.bat`** and **`KeyRemap.exe`** in the **same folder**.
+3. **Double-click `install-autostart.bat`**.
 
-Done — the remap now runs automatically every time Windows starts.
+That's it. The script copies `KeyRemap.exe` into your Windows Startup folder and launches it. From now on the remap runs automatically every time Windows starts.
 
-### Option 2 — Use the `.ahk` script (requires AutoHotkey v2)
-
-1. Install **AutoHotkey v2** from [autohotkey.com](https://www.autohotkey.com/).
-2. Download **`KeyRemap.ahk`** from this repo.
-3. **Double-click** it. Done.
-4. For auto-start: `Win + R` → `shell:startup` → copy `KeyRemap.ahk` into the Startup folder.
+> **Manual alternative:** if you'd rather not use the `.bat`, copy `KeyRemap.exe` yourself into:
+> ```
+> C:\Users\<YourUsername>\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
+> ```
 
 ### Uninstall
 
-1. `Win + R` → `shell:startup` → delete `KeyRemap.exe` / `KeyRemap.ahk` from the Startup folder.
+1. Delete `KeyRemap.exe` from the Startup folder (`...\Start Menu\Programs\Startup`).
 2. Right-click the green **H** tray icon → **Exit** to stop the running instance.
 
-### Notes
+### Prefer the raw script? (Option: `.ahk`)
 
-- **Windows Defender** may flag AutoHotkey-compiled `.exe` files as *false positives*. Choose **Run anyway** / **Keep**, or use Option 2 (the `.ahk` script) which doesn't trigger this.
-- Built and tested on Windows. Works on Windows 10 & 11.
+If you'd rather see/edit the code instead of running an `.exe`:
 
----
-
-## 🇮🇩 Bahasa Indonesia
-
-### Cara 1 — Pakai `.exe` (paling gampang, tanpa install)
-
-1. Buka halaman **[Releases](../../releases)**.
-2. Download **`KeyRemap.exe`**.
-3. **Double-click** file-nya. Remap langsung aktif (muncul ikon hijau **H** di system tray).
-
-> Tidak perlu install AutoHotkey — `.exe` ini sudah mandiri.
-
-**Agar otomatis jalan tiap Windows menyala:**
-
-1. Tekan `Win + R`.
-2. Ketik **`shell:startup`** lalu Enter. Folder Startup terbuka.
-3. **Copy** `KeyRemap.exe` ke folder tersebut (atau buat shortcut di situ).
-
-Selesai — remap otomatis aktif setiap laptop dinyalakan.
-
-### Cara 2 — Pakai script `.ahk` (butuh AutoHotkey v2)
-
-1. Install **AutoHotkey v2** dari [autohotkey.com](https://www.autohotkey.com/).
-2. Download **`KeyRemap.ahk`** dari repo ini.
-3. **Double-click** file-nya. Selesai.
-4. Untuk autorun: `Win + R` → `shell:startup` → copy `KeyRemap.ahk` ke folder Startup.
-
-Isi script-nya:
+1. Install **AutoHotkey v2** from [autohotkey.com](https://www.autohotkey.com/).
+2. Download **`KeyRemap.ahk`** and double-click it.
 
 ```autohotkey
 #Requires AutoHotkey v2.0
@@ -93,14 +62,51 @@ Isi script-nya:
 !Right::Send "{End}"
 ```
 
+### Notes
+
+- **Windows Defender** may flag AutoHotkey-compiled `.exe` files as *false positives*. Choose **Run anyway** / **Keep**, or use the `.ahk` script which doesn't trigger this.
+- Built and tested on Windows. Works on Windows 10 & 11.
+
+---
+
+## 🇮🇩 Bahasa Indonesia
+
+### Langkah 1 — Jalankan remap
+
+1. Buka halaman **[Releases](../../releases)**.
+2. Download **`KeyRemap.exe`**.
+3. **Double-click** file-nya. Remap langsung aktif (muncul ikon hijau **H** di system tray).
+
+> Tidak perlu install AutoHotkey — `.exe` ini sudah mandiri.
+
+### Langkah 2 — Buat otomatis jalan tiap boot (cara paling gampang)
+
+1. Download juga **`install-autostart.bat`** dari halaman Releases.
+2. Taruh **`install-autostart.bat`** dan **`KeyRemap.exe`** di **folder yang sama**.
+3. **Double-click `install-autostart.bat`**.
+
+Selesai. Script akan menyalin `KeyRemap.exe` ke folder Startup Windows dan langsung menjalankannya. Mulai sekarang remap otomatis aktif tiap Windows menyala.
+
+> **Cara manual:** kalau tidak mau pakai `.bat`, copy sendiri `KeyRemap.exe` ke:
+> ```
+> C:\Users\<NamaUser>\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
+> ```
+
 ### Cara uninstall
 
-1. `Win + R` → `shell:startup` → hapus `KeyRemap.exe` / `KeyRemap.ahk` dari folder Startup.
+1. Hapus `KeyRemap.exe` dari folder Startup (`...\Start Menu\Programs\Startup`).
 2. Klik kanan ikon **H** hijau di system tray → **Exit**.
+
+### Mau pakai script mentahnya? (Opsi: `.ahk`)
+
+Kalau lebih suka melihat/mengubah kode daripada menjalankan `.exe`:
+
+1. Install **AutoHotkey v2** dari [autohotkey.com](https://www.autohotkey.com/).
+2. Download **`KeyRemap.ahk`** dan double-click.
 
 ### Catatan
 
-- **Windows Defender** kadang memunculkan peringatan *false-positive* untuk `.exe` hasil AutoHotkey. Pilih **Run anyway** / **Keep**, atau gunakan Cara 2 (script `.ahk`) yang tidak memicu peringatan ini.
+- **Windows Defender** kadang memunculkan peringatan *false-positive* untuk `.exe` hasil AutoHotkey. Pilih **Run anyway** / **Keep**, atau gunakan script `.ahk` yang tidak memicu peringatan ini.
 - Dibuat & diuji pada Windows. Mendukung Windows 10 & 11.
 
 ---
